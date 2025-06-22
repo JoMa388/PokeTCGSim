@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import { useEffect, useState } from "react";
 import Input from "../components/Input";
 import Dropdown from "../components/Dropdown";
+import { APIKEY } from "../../apikey/apikey";
 import { Type } from "../constants/Dropdownvalues";
 import { subType } from "../constants/Dropdownvalues";
 const DeckBuilder = () => {
@@ -57,7 +58,7 @@ const DeckBuilder = () => {
             page,
           },
           headers: {
-            "X-Api-Key": "c26040e7-239f-4ed5-9dad-af194d301eef",
+            "X-Api-Key": { APIKEY },
           },
         });
         console.log(data.data);
