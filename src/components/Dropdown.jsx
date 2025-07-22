@@ -1,12 +1,12 @@
-const Dropdown = ({ value, setter, text, optValues, filterTarget }) => {
+const Dropdown = ({ value, setter, label, optValues, filterTarget }) => {
   return (
-    <div className="flex items-center my-2">
-      <label htmlFor="cardType" className="font-bold text-xl w-24">
-        {text}
+    <div className="flex justify-start items-center mt-2">
+      <label htmlFor="cardType" className="font-bold text-md mx-4">
+        {label}
       </label>
       <select
         id="cardType"
-        className="bg-red-600 w-40 p-2 items-center text-lg rounded font-bold"
+        className="bg-red-900 w-1/3 items-center text-sm rounded p-1 "
         onChange={(e) => setter((prev) => ({ ...prev, [filterTarget]: e.target.value }))}
         value={value}
       >
@@ -17,7 +17,7 @@ const Dropdown = ({ value, setter, text, optValues, filterTarget }) => {
           </option>
         ))}
       </select>
-    </div>
+    </div >
   );
 };
 export default Dropdown;

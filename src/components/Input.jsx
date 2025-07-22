@@ -1,10 +1,10 @@
-const Input = ({ value, setter, label }) => {
+const Input = ({ id, value, setter, label }) => {
   return (
-    <div className="flex items-center">
-      <label htmlFor="searchName" className="font-bold text-xl w-24">
+    <div className="flex items-center justify-start mt-1">
+      <label htmlFor={id} className="font-bold text-md w-10 mx-4">
         {label}
       </label>
-      <input type="text" id="searchName" onChange={(e) => setter(e.target.value)} value={value} className="bg-white my-2 p-1 text-black w-80" />
+      <input type="text" value={value} id={id} onChange={(e) => setter(e.target.value)} className="bg-white  text-black w-2/3" />
     </div>
   );
 };

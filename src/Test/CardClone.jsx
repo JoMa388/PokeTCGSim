@@ -2,16 +2,11 @@ import useDeck from "../states/useDeck";
 const Card = ({ card, onHover }) => {
   const addCard = useDeck((state) => state.addCard);
   return (
-    <div
-      onMouseEnter={onHover}
+    <img onMouseEnter={onHover}
       onContextMenu={(e) => {
         e.preventDefault();
         addCard(card);
-      }}
-      className=" border-8 border-black cursor-pointer"
-    >
-      <img src={card.images.small} alt="card.name" className="" />
-    </div>
+      }} src={card.images.small} alt="card.name" className="border border-black rounded cursor-pointer" />
   );
 };
 export default Card;
