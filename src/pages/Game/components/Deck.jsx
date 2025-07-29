@@ -1,9 +1,10 @@
 import { useState } from "react"
 import CardBack from "../../../assets/cardback.png"
 import useBoard from "../../../states/useBoard"
-const Deck = ({ deck, view }) => {
+const Deck = ({ view }) => {
   const shuffle = useBoard((state) => state.shuffleArray)
   const drawCards = useBoard((state) => state.drawCards)
+  const deck = useBoard((state) => state.board.deck)
 
   const [hover, setHovered] = useState(false)
   return (
