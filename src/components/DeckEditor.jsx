@@ -1,6 +1,5 @@
 import { useState } from "react";
 import useDeck from "../states/useDeck";
-import { useDroppable } from "@dnd-kit/core";
 const DeckEditor = ({ setHoverCard, setDeckCards }) => {
   const deck = useDeck((state) => state.deck);
   const addCard = useDeck((state) => state.addCard);
