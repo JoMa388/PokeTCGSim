@@ -26,7 +26,7 @@ const ApiData = () => {
             page,
           },
           headers: {
-            "X-Api-Key": import.meta.env.VITE_POKEMON_API_KEY,
+            "X-Api-Key": apiKEY,
           },
         });
         fetchedCards = [...fetchedCards, ...data.data];

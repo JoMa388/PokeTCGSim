@@ -15,6 +15,7 @@ const App = () => {
           <Route path="play" element={<Play />} />
         </Routes>
       </BrowserRouter>
+      {/* <Admin></Admin> */}
     </>
   );
 };
